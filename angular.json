@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Examen-Practico-Angular10"
+    }
+  },
+  "defaultProject": "Examen-Practico-Angular10",
+  "cli": {
+    "analytics": "e65e2fc0-25a1-4d23-aeff-d4309e7967bc"
+  }
 }
