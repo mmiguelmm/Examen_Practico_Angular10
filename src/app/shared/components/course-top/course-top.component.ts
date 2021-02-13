@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-course-top',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseTopComponent implements OnInit {
 
+  @Input() course: [];
   constructor() { }
 
   ngOnInit(): void {

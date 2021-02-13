@@ -1,2 +1,6 @@
 <!--Se incluyen los componentes-->
 <h2>Componente Lista de Cursos "COURSES"</h2>
+<div *ngFor="let course of courses">
+    <app-course-top [course]="course"></app-course-top>
+</div>
+
