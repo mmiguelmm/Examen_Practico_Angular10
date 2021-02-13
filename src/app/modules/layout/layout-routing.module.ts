@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { LayoutComponent } from './pages/layout/layout.component';
 
 const routes: Routes = [
 
   {
     path: '',
-    //component: LayoutComponent,
+    component: LayoutComponent,
     children: [
       {
         path: '',
@@ -26,6 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    component: LayoutComponent,
     children: [
       {
         path: '',
