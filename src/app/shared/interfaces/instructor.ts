@@ -2,7 +2,7 @@ export interface Instructor {
   
     id: number;
     name: string;
-    lastname: string;
+    lastName: string;
     educationTitle: string;
     image: string;
    }
