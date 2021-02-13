@@ -19,7 +19,7 @@ const routes: Routes = [
       },
      
       {
-        path: 'people',
+        path: 'contact',
         loadChildren: () => import('../people/people.module').then(m => m.PeopleModule)
       },
     ]
