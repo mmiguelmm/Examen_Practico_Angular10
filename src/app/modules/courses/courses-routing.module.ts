@@ -9,7 +9,7 @@ const routes: Routes = [
     component: CourseListPageComponent
   },
   {
-    path: 'course-detail',
+    path: ':id',
     component: CourseDetailPageComponent
   },
 ];

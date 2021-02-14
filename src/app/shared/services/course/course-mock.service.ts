@@ -26,4 +26,11 @@ export class CourseMockService {
     });
   }
 
+  getCourse(id: number): Observable<Course> {
+    return new Observable(observer => {
+      const course: Course =coursesMock.find(course => course.id === id);
+      observer.next(course);
+    });
+  }
+
 }

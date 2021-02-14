@@ -16,4 +16,15 @@ export class InstructorMockService {
     });
   }
 
+  //sequencia
+  getFeaturedInstructors(): Observable<Instructor[]> {
+    return new Observable(observer => {
+      const featuredCourses: Instructor[] = InstructorsMock;
+      observer.next(featuredCourses);
+      setTimeout(() => {
+        observer.next(InstructorsMock);
+      });
+    });
+  }
+
 }

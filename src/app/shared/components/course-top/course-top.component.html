@@ -1,1 +1,8 @@
-<h2>Componente lista de cursos top "COURSES-TOP"</h2>
+<div>
+  <img [src]="course.image" width="60%" height="auto">
+  
+<p>
+  <a [routerLink]="['/courses', course.id]">
+    {{ course.name }}
+   </a>
+ </p>

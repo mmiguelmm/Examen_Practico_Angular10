@@ -1,4 +1,4 @@
-<form class="form-signin" style="padding-top: 3%">
+<form class="form-signin" style="padding-top: 3%"  [formGroup]="contactForm" (ngSubmit)="onsubmit()">
     <table>
         <tr>
             <td style="text-align: center;">
@@ -11,16 +11,16 @@
                     <input type="text" class="form-control" placeholder="nombres" autofocus formControlName="nombres">
                 </td>
                 <td>
-                    <input type="password" class="form-control" placeholder="email" formControlName="email">
+                    <input type="text" class="form-control" placeholder="email" formControlName="email">
                 </td>
                 <td>
-                    <input type="textarea" class="form-control" placeholder="telefono" formControlName="telefono">
+                    <input type="text" class="form-control" placeholder="telefono" formControlName="telefono">
                 </td>
 
             </tr>
             <tr>
                 <td colspan="4">
-                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+                    <textarea class="form-control z-depth-1"  id="comentario" formControlName="comentario" rows="3" placeholder="Ingrese aqui su comentario..."></textarea>
                 </td>
                
             </tr>

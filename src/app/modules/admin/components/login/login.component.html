@@ -1,4 +1,5 @@
-<form class="form-signin" style="padding-top: 3%; padding-left: 40%;">
+<form class="form-signin" style="padding-top: 3%; padding-left: 40%;" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
+  
     <table>
         <tr>
             <td style="text-align: center;">

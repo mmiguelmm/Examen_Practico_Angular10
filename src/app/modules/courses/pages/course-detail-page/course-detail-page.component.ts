@@ -9,9 +9,23 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class CourseDetailPageComponent implements OnInit {
 
   courseId: number;
-  constructor() { }
+  constructor(
+
+    private route: ActivatedRoute
+
+  ) { }
 
   ngOnInit(): void {
+
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.courseId = this.getCourseId(params);
+      }
+    )
+
   }
 
+  getCourseId(params: Params): number {
+    return Number(params.id);
+  }
 }

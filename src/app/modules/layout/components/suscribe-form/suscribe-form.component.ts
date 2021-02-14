@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-suscribe-form',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuscribeFormComponent implements OnInit {
 
-  constructor() { }
+  suscribeForm: FormGroup;
+  constructor(
+
+    private router: Router, 
+    private fb: FormBuilder,
+
+  ) { }
 
   ngOnInit(): void {
+    
+    this.initForm();
+  }
+
+  initForm(): void {
+    this.suscribeForm = this.fb.group({
+      email: [null, Validators.required],    
+    })
+  }
+
+  onsubmit() {
+    if (this.suscribeForm.valid) {
+      const username = this.suscribeForm.get('email').value;
+    }
   }
 
 }
